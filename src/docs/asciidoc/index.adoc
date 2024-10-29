@@ -1,0 +1,19 @@
+= E-SHOP API Documentation
+E-SHOP API Documentation
+:source-highlighter: highlightjs
+:toc: left
+:toc-title: Table of Contents
+:toclevels: 2
+:sectnums:
+:sectlinks:
+
+[[AD-API]]
+== AD API
+
+[[AD-random-search]]
+=== AD random search
+operation::get-ad-random[snippets='http-request,http-response,response-fields']
+
+[[AD-category-ID-search]]
+=== AD category ID search
+operation::get-ad-by-category[snippets='http-request,path-parameters,http-response,response-fields']
