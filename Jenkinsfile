@@ -29,9 +29,6 @@ spec:
   stages {
 
     stage('Approval') {
-      when {
-        branch 'main'
-      }
       steps {
         script {
           def plan = 'backend CI'
@@ -42,9 +39,6 @@ spec:
     }
 
     stage('build and push docker image') {
-      when {
-        branch 'main'
-      }             
       steps {
         container('gradle') {
           sh 'gradle jib --no-daemon --image 566478607909.dkr.ecr.us-east-1.amazonaws.com/eshop-backend:0.0.1 -Djib.to.auth.username=AWS -Djib.to.auth.password=$CRED'
